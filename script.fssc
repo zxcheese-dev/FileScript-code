@@ -1,0 +1,34 @@
+// script that creates file "text.txt" with your text
+// wrote in FileScript
+
+var msg "hi there!"
+println msg
+
+// asking for creating file
+input "do you wanna create file with this script? " text
+
+// main logic
+if text == "yes"
+	// if answer is "yes"
+	input "good! now type your text we will write to file: " data
+
+	var ex ?exist "text.txt"
+
+	if ex == True
+		var msg "oh, file text.txt is exists sorry"
+		println msg
+	else
+		create file "text.txt" data
+
+		var msg3 "well, we created file 'text.txt', see you later!"
+		println msg3
+	endif
+
+	wait 2
+else
+	// if answer is not "yes"
+	var msg1 "okay, see you later!"
+	println msg1
+
+	wait 2
+endif
